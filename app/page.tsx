@@ -5,6 +5,24 @@ export default function HomePage() {
       <p className="text-lg">
         We are committed to freeing oceans and seas from dumped and abandoned polyester and carbon composite yachts and boats.
       </p>
+      <p className="text-lg">
+        We are committed to freeing oceans and seas from dumped and abandoned polyester and carbon composite yachts and boats.
+      </p>
+      <p className="text-lg">
+        We are committed to freeing oceans and seas from dumped and abandoned polyester and carbon composite yachts and boats.
+      </p>
+      <p className="text-lg">
+        We are committed to freeing oceans and seas from dumped and abandoned polyester and carbon composite yachts and boats.
+      </p>
+      <p className="text-lg">
+        We are committed to freeing oceans and seas from dumped and abandoned polyester and carbon composite yachts and boats.
+      </p>
+      <p className="text-lg">
+        We are committed to freeing oceans and seas from dumped and abandoned polyester and carbon composite yachts and boats.
+      </p>
+      <p className="text-lg">
+        We are committed to freeing oceans and seas from dumped and abandoned polyester and carbon composite yachts and boats.
+      </p>
     </main>
   );
 }
