@@ -15,14 +15,16 @@ export default function MobileMenu() {
   }, []);
 
   return (
+  <>
+    {/* Hamburger button (inside nav bar) */}
     <div className="md:hidden">
-      {/* Hamburger button */}
       <button
         onClick={() => setOpen(!open)}
         className="focus:outline-none focus:ring p-2"
         aria-label="Toggle menu"
         aria-expanded={open}
       >
+        {/* hamburger icon */}
         <div
           className={`w-6 h-0.5 bg-white mb-1 transition-transform duration-300 ${
             open ? 'rotate-45 translate-y-1.5' : ''
@@ -39,13 +41,15 @@ export default function MobileMenu() {
           }`}
         />
       </button>
+    </div>
 
-      {/* Mobile dropdown menu */}
-      <div
-        className={`mt-2 flex flex-col space-y-2 bg-blue-700 p-4 rounded-md transition-all duration-300 ease-in-out ${
-          open ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'
-        } origin-top`}
-      >
+    {/* Dropdown menu (outside nav bar height) */}
+    <div
+      className={`md:hidden transition-all duration-300 ease-in-out bg-blue-700 text-white px-4 py-2 ${
+        open ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
+      } origin-top`}
+    >
+      <div className="flex flex-col space-y-2">
         <Link href="/" className="hover:underline" onClick={() => setOpen(false)}>
           Home
         </Link>
@@ -54,5 +58,6 @@ export default function MobileMenu() {
         </Link>
       </div>
     </div>
+  </>
   );
 }
