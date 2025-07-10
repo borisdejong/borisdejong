@@ -1,5 +1,4 @@
 import './globals.css';
-import Link from 'next/link';
 import MobileNav from './components/MobileNav';
 import DesktopNav from './components/DesktopNav';
 
