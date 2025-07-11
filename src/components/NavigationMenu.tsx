@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { navLinks } from '@/data/navLinks';
 import Image from 'next/image';
-
+import { Switch } from "@/components/ui/switch"
 
 export default function NavigationMenu() {
   return (
@@ -37,6 +37,7 @@ export default function NavigationMenu() {
           </li>
         ))}
         </ul>
+        <Switch />
       </div>
     </nav>
   );
