@@ -1,5 +1,5 @@
 import '@/app/globals.css'; // This path uses your alias, which is correct
-import NavBar from '@/components/NavBarNew';
+import NavBar from '@/components/NavBar';
 
 export const metadata = {
   title: 'Boris de Jong',
