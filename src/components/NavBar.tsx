@@ -3,7 +3,18 @@ import { navLinks } from '@/data/navLinks';
 import Image from 'next/image';
 import { Switch } from "@/components/ui/switch"
 
-export default function NavigationMenu() {
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
+
+export default function NavBar() {
   return (
     <nav className="sticky left-0 top-0 z-40 w-full sm:top-6">
       <div className="mx-auto flex max-w-5xl items-center justify-between border-b border-zinc-200 bg-white bg-opacity-50 p-4 py-2 text-sm backdrop-blur transition-colors duration-150 sm:rounded-lg sm:border lg:px-6">
@@ -20,7 +31,8 @@ export default function NavigationMenu() {
               </div>
             </Link>
           </div>
-        <ul className="flex md:flex space-x-6">
+        <div className='flex items-center flex-row gap-4'>
+        <ul className='flex md:flex space-x-6'>
           {navLinks.map((link) => (
           <li key={link.id}>
             <Link className="
@@ -38,6 +50,7 @@ export default function NavigationMenu() {
         ))}
         </ul>
         <Switch />
+        </div>
       </div>
     </nav>
   );

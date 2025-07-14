@@ -30,6 +30,7 @@ module.exports = {
       // It's good practice to explicitly bring in default colors if you plan to
       // extend them or troubleshoot issues like blue-600 not appearing.
       // This ensures the default palette is fully available.
+      darkMode: 'class',
       colors: {
         // You can add all default colors, or just the ones you are having issues with
         gray: colors.gray,
@@ -68,7 +69,7 @@ module.exports = {
 
   // 'plugins' for adding official or third-party Tailwind plugins
   plugins: [
-    // require('@tailwindcss/typography'), // Example if you use typography plugin
+    require('@tailwindcss/typography'), // Example if you use typography plugin
     // require('@tailwindcss/forms'),      // Example if you use forms plugin
   ],
 };
