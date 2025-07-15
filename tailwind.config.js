@@ -1,75 +1,64 @@
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors'); // Recommended for explicitly extending default colors if needed
+const colors = require('tailwindcss/colors'); // Import Tailwind's default colors
 
 module.exports = {
-  // `future` options might be present depending on specific v4.x alpha build
-  // future: {
-  //   hoverOnlyWhenSupported: true,
-  //   respectDefaultRingColor: true,
-  //   disableColorOpacityUtilitiesByDefault: true,
-  //   // Add other future flags as per Tailwind v4.x documentation
-  // },
-
-  // The 'content' array tells Tailwind where to scan for utility classes.
-  // Ensure this covers ALL your files where you use Tailwind classes.
   content: [
-    // Scans all JS, TS, JSX, TSX, MDX files within your 'src' directory
     './src/**/*.{js,ts,jsx,tsx,mdx}',
-
-    // Including these for broader compatibility if some files might be
-    // directly at the root, though './src/**' should cover everything inside 'src'.
-    './app/**/*.{js,ts,jsx,tsx,mdx}', // For files directly under root 'app' (e.g., if you don't use 'src')
-    './pages/**/*.{js,ts,jsx,tsx,mdx}', // For Pages Router projects
-    './components/**/*.{js,ts,jsx,tsx,mdx}', // For components directly under root
+    './src/content/**/*.mdx',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-
-  // 'theme' section for customizing default Tailwind values
+  darkMode: 'class', // Correct location
   theme: {
     extend: {
-      // It's good practice to explicitly bring in default colors if you plan to
-      // extend them or troubleshoot issues like blue-600 not appearing.
-      // This ensures the default palette is fully available.
-      darkMode: 'class',
       colors: {
-        // You can add all default colors, or just the ones you are having issues with
+        // --- YOUR EXISTING COLORS (using tailwindcss/colors) ---
         gray: colors.gray,
         blue: colors.blue,
         red: colors.red,
         zinc: colors.zinc,
-        'vercel-blue': '#0070F3',
-        // Add other default colors you use:
-        // yellow: colors.yellow,
-        // green: colors.green,
-        // indigo: colors.indigo,
-        // purple: colors.purple,
-        // pink: colors.pink,
-        // emerald: colors.emerald,
-        // teal: colors.teal,
-        // cyan: colors.cyan,
-        // sky: colors.sky,
-        // lime: colors.lime,
-        // amber: colors.amber,
-        // orange: colors.orange,
-        // violet: colors.violet,
-        // fuchsia: colors.fuchsia,
-        // rose: colors.rose,
+
+        // --- SHADCN UI / CUSTOM THEME COLORS (using CSS variables) ---
+        // These are the new ones you need to add for 'border', 'input', etc.
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
       },
-      // Example for custom fonts, if you add them:
-      // fontFamily: {
-      //   inter: ['Inter', 'sans-serif'],
-      // },
-      // Example for custom spacing, if you add them:
-      // spacing: {
-      //   '128': '32rem',
-      //   '144': '36rem',
-      // },
     },
   },
-
-  // 'plugins' for adding official or third-party Tailwind plugins
   plugins: [
-    require('@tailwindcss/typography'), // Example if you use typography plugin
-    // require('@tailwindcss/forms'),      // Example if you use forms plugin
+    require('@tailwindcss/typography'),
+    // Add any other plugins here
   ],
 };

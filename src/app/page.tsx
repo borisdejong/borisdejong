@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button"
-import { Tooltip, TooltipContent, TooltipTrigger, } from "@/components/ui/tooltip"
 import { Separator } from "@/components/ui/separator"
 
 export default function HomePage() {
@@ -24,16 +23,11 @@ export default function HomePage() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
 
-              <Tooltip>
-                <TooltipTrigger asChild>
+
                   <Button asChild>
                     <Link href="/about">About Me</Link>
                   </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>View more about me</p>
-                </TooltipContent>
-              </Tooltip>
+
             </div>
           </div>
         </div>
