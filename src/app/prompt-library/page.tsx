@@ -1,6 +1,5 @@
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -17,7 +16,6 @@ export default function PromptLibrary() {
             <CardHeader>
                 <CardTitle>Card Title</CardTitle>
                 <CardDescription>Card Description</CardDescription>
-                <CardAction>Card Action</CardAction>
             </CardHeader>
             <CardContent>
                 <p>Card Content</p>
@@ -31,7 +29,6 @@ export default function PromptLibrary() {
             <CardHeader>
                 <CardTitle>Card Title</CardTitle>
                 <CardDescription>Card Description</CardDescription>
-                <CardAction>Card Action</CardAction>
             </CardHeader>
             <CardContent>
                 <p>Card Content</p>
@@ -45,7 +42,6 @@ export default function PromptLibrary() {
             <CardHeader>
                 <CardTitle>Card Title</CardTitle>
                 <CardDescription>Card Description</CardDescription>
-                <CardAction>Card Action</CardAction>
             </CardHeader>
             <CardContent>
                 <p>Card Content</p>

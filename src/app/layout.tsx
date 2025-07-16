@@ -1,4 +1,4 @@
-import '@/app/globals.css'; // This path uses your alias, which is correct
+import '@/app/globals.css';
 import NavBar from '@/components/NavBar';
 
 export const metadata = {
