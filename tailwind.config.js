@@ -1,15 +1,17 @@
 // tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors'); // Import Tailwind's default colors
 
-module.exports = {
+import colors from "tailwindcss/colors";
+import tailwindcssTypography from "@tailwindcss/typography"; // Import the plugin
+
+/** @type {import('tailwindcss').Config} */
+const config = {
   content: [
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/content/**/*.mdx',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/content/**/*.mdx",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: 'class', // Correct location
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -20,7 +22,6 @@ module.exports = {
         zinc: colors.zinc,
 
         // --- SHADCN UI / CUSTOM THEME COLORS (using CSS variables) ---
-        // These are the new ones you need to add for 'border', 'input', etc.
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -58,7 +59,10 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    // Add any other plugins here
+    tailwindcssTypography, // Use the imported plugin directly
+    // Add any other imported plugins here
   ],
 };
+
+// Export the named variable using ES Module syntax
+export default config;

@@ -1,19 +1,23 @@
-const createMDX = require('@next/mdx');
+// next.config.js
+
+// Change 'require' to 'import' and use default export
+import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */ // This JSDoc provides type hints in JS
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };
 
-// Merge MDX config with Next.js config
+// Create the withMDX function by directly calling createMDX
 const withMDX = createMDX({
   // Add your MDX options here, if any
   // For example:
-  // extension: /\.mdx?$/, // This is the default, so often not needed
+  // extension: /\.mdx?$/,
   // options: {
   //   remarkPlugins: [],
   //   rehypePlugins: [],
   // }
 });
 
-module.exports = withMDX(nextConfig);
+// Export the merged config using ES Module syntax
+export default withMDX(nextConfig);
