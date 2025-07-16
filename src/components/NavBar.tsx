@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { navLinks } from "@/data/navLinks";
+import NavLink from "@/components/NavLink";
 import { Switch } from "@/components/ui/switch";
 import { Sun, Moon } from "lucide-react";
 import React, { useState, useEffect } from "react";
@@ -47,37 +48,26 @@ export default function NavBar() {
           </Link>
         </div>
         <div className="flex items-center flex-row gap-4">
-          <NavigationMenu>
-            <NavigationMenuList>
+          <nav>
+            <ul className="flex items-center gap-6">
               {navLinks.map((link) => {
-                const IconComponent = link.icon;
                 return (
-                  <NavigationMenuItem key={link.id}>
-                    <NavigationMenuLink
-                      asChild
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      <Link
-                        className="
-                                text-black hover:text-gray-800
-                                dark:text-white dark:hover:text-white-800
-                                transition-all duration-200 ease-in-out
-                                whitespace-nowrap
-                                block  
-                                "
-                        href={link.url}
+                      <NavLink 
+                        href={link.url} 
                         target={link.target}
-                      >
-                        {IconComponent && <IconComponent className="h-4 w-4" />}
-                        {link.title}
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
+                        className="
+                        text-black hover:text-gray-800
+                        dark:text-white dark:hover:text-white-800
+                        transition-all duration-200 ease-in-out
+                        whitespace-nowrap
+                        block
+                        ">
+                          {link.title}
+                      </NavLink>                 
                 );
               })}
-            </NavigationMenuList>
-          </NavigationMenu>
-
+              </ul>
+              </nav>
           {!isToggleEnabled ? (
             <Moon className="h-4 w-4 transition-colors" />
           ) : (
