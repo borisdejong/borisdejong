@@ -13,7 +13,7 @@ export default function ContactPage() {
     <section className="justify-between items-center">
       <Intro title={PAGE_TITLE} />
       <p>
-        You can email me at <code>inbox[dot]borisdejong.dev</code>.
+        You can email me at: <code>inbox[dot]borisdejong.dev</code>
       </p>
     </section>
   );
