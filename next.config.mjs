@@ -1,6 +1,5 @@
 // next.config.js
 
-// Change 'require' to 'import' and use default export
 import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */ // This JSDoc provides type hints in JS

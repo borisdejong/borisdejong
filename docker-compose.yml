@@ -1,0 +1,24 @@
+services:
+  # --- Next.js Application Service ---
+  web:
+    build:
+      context: . # Build context is the current directory
+      dockerfile: Dockerfile.dev # Use our specific development Dockerfile
+    container_name: borisdejong # A friendly name for your container
+    ports:
+      - "3000:3000" # Map host port 3000 to container port 3000
+    volumes:
+      - .:/app # <--- THIS IS THE MAGIC FOR LIVE RELOADING!
+      # Mounts your host machine's current directory (your project)
+      # into the container's /app directory. Changes on your host are instantly
+      # reflected in the container.
+      - /app/node_modules # <--- CRITICAL: Prevents host's node_modules from overwriting container's
+      # This anonymous volume ensures that the `node_modules` directory inside the container
+      # (where `npm install` runs) is NOT overwritten by a potentially empty or incompatible
+      # `node_modules` directory from your host.
+    environment:
+      # Environment variables for your Next.js app (if any, e.g., API keys)
+      NODE_ENV: development
+      # Add any other environment variables your dev server needs here,
+      # e.g., NEXT_PUBLIC_API_URL: 'http://localhost:8000' (if you have a separate backend)
+    command: npm run dev # <--- Explicitly run the dev server here (or yarn dev / pnpm dev)

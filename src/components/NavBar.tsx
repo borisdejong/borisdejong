@@ -5,18 +5,8 @@ import Image from "next/image";
 import { navLinks } from "@/data/navLinks";
 import NavLink from "@/components/NavLink";
 import { Switch } from "@/components/ui/switch";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, House } from "lucide-react";
 import React, { useState, useEffect } from "react";
-
-import {
-  NavigationMenu,
-  // NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  // NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
 
 export default function NavBar() {
   const [isToggleEnabled, setIsToggleEnabled] = useState(false);
@@ -52,8 +42,10 @@ export default function NavBar() {
             <ul className="flex items-center gap-6">
               {navLinks.map((link) => {
                 return (
+                    <li key={link.url}>
                       <NavLink 
                         href={link.url} 
+                        icon={link.icon}
                         target={link.target}
                         className="
                         text-black hover:text-gray-800
@@ -63,22 +55,24 @@ export default function NavBar() {
                         block
                         ">
                           {link.title}
-                      </NavLink>                 
+                      </NavLink>
+                    </li>              
                 );
               })}
               </ul>
               </nav>
-          {!isToggleEnabled ? (
-            <Moon className="h-4 w-4 transition-colors" />
-          ) : (
-            <Sun className="h-4 w-4 transition-colors" />
-          )}
-
-          <Switch
-            checked={isToggleEnabled}
-            onCheckedChange={setIsToggleEnabled}
-            aria-label="Toggle icon visibility"
-          />
+              <div className="flex flex-row gap-2 items-center">
+                {!isToggleEnabled ? (
+                  <Moon className="h-4 w-4 transition-colors" />
+                ) : (
+                  <Sun className="h-4 w-4 transition-colors" />
+                )}
+                <Switch
+                  checked={isToggleEnabled}
+                  onCheckedChange={setIsToggleEnabled}
+                  aria-label="Toggle icon visibility"
+                />
+              </div>
         </div>
       </div>
     </nav>

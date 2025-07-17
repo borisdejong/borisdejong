@@ -1,0 +1,13 @@
+# Dockerfile.dev
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm install # Install all dependencies for dev
+
+# NO `COPY . .` after initial package.json copy
+# NO `RUN npm run build`
+
+EXPOSE 3000
+CMD [ "npm", "run", "dev" ] # Run dev server directly

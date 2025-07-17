@@ -18,23 +18,18 @@ export const navLinks: NavLink[] = [
     icon: House,
   },
   {
-    id: "about",
-    title: "About",
-    url: "/about",
-  },
-  {
     id: "posts",
     title: "Posts",
     url: "/posts",
   },
   {
-    id: "prompt_library",
-    title: "Prompt Library",
-    url: "/prompt-library",
+    id: "about",
+    title: "About",
+    url: "/about",
   },
   {
     id: "contact",
     title: "Contact",
-    url: "/contact-us",
+    url: "/contact",
   },
 ];

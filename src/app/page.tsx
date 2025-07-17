@@ -1,38 +1,22 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import React from 'react';
 
 export default function HomePage() {
   return (
     <section className="justify-between items-center">
-      <div className="flex max-w-160 mx-auto flex-col md:flex-row gap-8 items-center">
-        <div className="w-full md:w-1/3">
-          <Image
-            src="/images/profile-picture.jpg"
-            alt="Boris de Jong"
-            width={75}
-            height={75}
-            className="block h-25 w-25 sm:h-40 sm:w-40 rounded-full"
-          />
-        </div>
-        <div className="w-full md:w-2/3 gap-2">
-          <h1 className="text-4xl font-bold mb-4">Hi 👋 My name is Boris.</h1>
-          <div className="flex flex-row flex-wrap gap-4">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-
-            <Button asChild>
-              <Link href="/about">About Me</Link>
-            </Button>
+      <div className="flex max-w-160 mx-auto flex-col gap-4">
+          <h1 className="text-4xl font-bold">Boris de Jong</h1>
+          <ul className="max-w-200">
+            <li>💼 Current: Product Manager @ Gomibo (a.k.a. Belsimpel)</li>
+            <li>🎓 Learning JavaScript and React, all at once.</li>
+            <li>🏠 Living in Groningen, the Netherlands</li>
+          </ul>
+          <div className="flex flex-row">
+              <Link className="hover:underline text-gray-600 hover:text-gray-800 dark:text-blue-400 dark:hover:text-blue-200 font-medium transition-colors duration-200" href="/about">Read more</Link>
           </div>
-        </div>
       </div>
-      <Separator className="my-10" orientation="horizontal" />
+      
     </section>
   );
 }

@@ -2,28 +2,32 @@
 
 import React from 'react'; // React is always needed for JSX
 import Link from "next/link";
-import { useRouter } from 'next/navigation'; // Import useRouter hook
+import { usePathname } from 'next/navigation';
+import { LucideIcon } from 'lucide-react';
 
 interface NavLinkProps {
-  href: string; // The URL the link should go to (e.g., "/")
+  href: string;
+  icon?: LucideIcon;
   children: React.ReactNode; // The content inside the link (e.g., "Home")
   className?: string;
   target?: string;
 }
 
 // Define the component as a functional component
-const NavLink: React.FC<NavLinkProps> = ({ href, children, className, target }) => {
+const NavLink: React.FC<NavLinkProps> = ({ href, icon: IconComponent, children, className, target }) => {
     // 1. Get the router object
-    const router = useRouter();
+    const pathname = usePathname();
     // 2. Compare the current page's path with the link's href
-    const isActive = router.pathname === href; // This is the core logic!
-    console.log(`Link: ${href}, Current Path: ${router.pathname}, Is Active: ${isActive}`); // For debugging! Remove later.
+    const isActive = pathname === href;
 
-    const activeClasses = 'text-blue-600 font-bold';
-    const defaultClasses = 'text-gray-700 hover:text-gray-900';
+    const activeClasses = 'border-b-2 border-dotted border-zinc-500';
+    const defaultClasses = 'pb-0.5';
 
   return (
     <Link href={href} target={target} className={`${isActive ? activeClasses : defaultClasses} ${className || ''}`}>
+        {IconComponent && ( // Check if IconComponent exists (is not null, undefined, false, 0, or empty string)
+          <IconComponent className="size-4" />
+      )}
         {children}
     </Link>
   );

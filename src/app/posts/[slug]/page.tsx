@@ -1,18 +1,14 @@
 // src/app/posts/[slug]/page.tsx (or similar path)
-
+import React from 'react';
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-// MDXRemote/rsc is for Server Components, so it's fine here
-//import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
-// We will create a new client component for this
-import MDXRendererClient from "./MDXRendererClient";
+import Intro from "@/components/Intro";
 
 // Define an interface for your frontmatter (from previous fix)
 interface PostFrontMatter {
   title: string;
-  description: string;
   date: string;
   [key: string]: string | number | boolean | string[] | undefined;
 }
@@ -83,17 +79,15 @@ export default async function PostPage({
 
   const title = frontMatter.title;
   const date = new Date(frontMatter.date).toLocaleDateString();
-  const description = frontMatter.description;
 
   return (
-    <article className="py-8">
-      <h1 className="text-4xl font-bold mb-4">{title}</h1>
-      <p className="text-gray-600 text-sm mb-6">
-        {date} by {description}
+    <article>
+      <Intro title={title} />
+      <p className="text-gray-600 text-sm mb-8">
+        {date}
       </p>
       <div className="prose">
-        {/* Pass the MDX content to a Client Component */}
-        <MDXRendererClient source={content} />
+        {content}
       </div>
     </article>
   );
