@@ -10,6 +10,9 @@ export default function HomePage() {
           <li>💼 Current: Product Manager @ Gomibo (a.k.a. Belsimpel)</li>
           <li>🎓 Learning JavaScript and React, all at once.</li>
           <li>🏠 Living in Groningen, the Netherlands</li>
+          <li>
+            <Link href="https://www.linkedin.com/in/boris-de-jong/">LinkedIn</Link>
+          </li>
         </ul>
         <div className="flex flex-row">
           <Link
