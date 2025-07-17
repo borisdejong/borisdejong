@@ -1,12 +1,12 @@
 import "@/app/globals.css";
 import NavBar from "@/components/NavBar";
-import React from 'react';
+import React from "react";
 
 export const metadata = {
   // Global default title
   title: {
-    default: 'Boris de Jong',
-    template: '%s | My Awesome Site', // '%s' will be replaced by page-specific title
+    default: "Boris de Jong",
+    template: "%s | My Awesome Site", // '%s' will be replaced by page-specific title
   },
 };
 

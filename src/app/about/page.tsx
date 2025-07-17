@@ -1,8 +1,8 @@
-import type { Metadata } from 'next'; // Import the Metadata type
-import React from 'react';
+import type { Metadata } from "next"; // Import the Metadata type
+import React from "react";
 import Intro from "@/components/Intro";
 
-const PAGE_TITLE = 'About';
+const PAGE_TITLE = "About";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section className="justify-between items-center">
-      <Intro title={PAGE_TITLE}/>
+      <Intro title={PAGE_TITLE} />
     </section>
   );
 }

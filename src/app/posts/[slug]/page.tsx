@@ -1,5 +1,5 @@
 // src/app/posts/[slug]/page.tsx (or similar path)
-import React from 'react';
+import React from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -83,12 +83,8 @@ export default async function PostPage({
   return (
     <article>
       <Intro title={title} />
-      <p className="text-gray-600 text-sm mb-8">
-        {date}
-      </p>
-      <div className="prose">
-        {content}
-      </div>
+      <p className="text-gray-600 text-sm mb-8">{date}</p>
+      <div className="prose">{content}</div>
     </article>
   );
 }
