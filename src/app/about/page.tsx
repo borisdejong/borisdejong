@@ -31,7 +31,7 @@ export default function AboutPage() {
       <section>
         <div className="flex flex-col justify-center items-center">
           <div className="max-w-xl">
-          <h2 className="text-4xl font-semibold text-center mb-3">Education</h2>
+          <h2 className="text-lg font-semibold text-gray-400 uppercase text-center mb-3">Education</h2>
           <div className="flex flex-col items-center mb-8">
             <Separator orientation="horizontal" className="my-1 w-10 h-1 bg-sky-700" />
           </div>
