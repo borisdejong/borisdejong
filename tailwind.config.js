@@ -20,6 +20,7 @@ const config = {
         blue: colors.blue,
         red: colors.red,
         zinc: colors.zinc,
+        sky: colors.sky,
 
         // --- SHADCN UI / CUSTOM THEME COLORS (using CSS variables) ---
         border: "hsl(var(--border))",

@@ -1,0 +1,51 @@
+{
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "MSc. Information Science",
+      "institution": "University of Groningen",
+      "location": "Groningen, Netherlands",
+      "startDate": "Sept 2021",
+      "endDate": "Jun 2023",
+      "description": "Completed a Master's degree in Information Science, focusing on [mention specific areas if applicable, e.g., data analytics, human-computer interaction]."
+    },
+    {
+      "id": "edu-2",
+      "degree": "BSc. Information Science",
+      "institution": "University of Groningen",
+      "location": "Groningen, Netherlands",
+      "startDate": "Sept 2016",
+      "endDate": "July 2020",
+      "description": "Completed Bachelor's degree in Information Science, gaining foundational knowledge in [mention specific areas if applicable, e.g., machine learning, natural language processing, web technologies]."
+    }
+  ],
+  "workExperience": [
+    {
+      "id": "work-1",
+      "title": "Product Manager",
+      "company": "Belsimpel - Gomibo",
+      "location": "Groningen, Netherlands",
+      "startDate": "Jan 2025",
+      "endDate": "Present",
+      "description": "Part of the the Channel Apps engineering team as well as the Channel Apps product team. Responsible for the front-end of the Belsimpel and Gomibo websites."
+    },
+    {
+      "id": "work-2",
+      "title": "Product Owner",
+      "company": "Belsimpel - Gomibo",
+      "location": "Groningen, Netherlands",
+      "startDate": "May 2023",
+      "endDate": "Jan 2025",
+      "description": "Product Owner within the Channel Apps engineering team."
+    },
+    {
+      "id": "work-3",
+      "title": "Founder",
+      "company": "WebNexus",
+      "location": "Groningen, Netherlands",
+      "startDate": "Sep 2016",
+      "endDate": "Sep 2023",
+      "description": "Founder of WebNexus"
+    }
+  ]
+}

@@ -36,7 +36,7 @@ const NavLink: React.FC<NavLinkProps> = ({
       className={`${isActive ? activeClasses : defaultClasses} ${className || ""}`}
     >
       {IconComponent && ( // Check if IconComponent exists (is not null, undefined, false, 0, or empty string)
-        <IconComponent className="size-4" />
+        <IconComponent className="size-6 pt-1 pb-1" />
       )}
       {children}
     </Link>

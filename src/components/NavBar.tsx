@@ -28,7 +28,7 @@ export default function NavBar() {
           >
             <div className="rounded-full p-[3px] transition-transform group-hover:scale-105">
               <Image
-                src="/images/profile-picture.jpg" // Path to your logo in the public folder
+                src="/images/me.webp" // Path to your logo in the public folder
                 alt="Boris de Jong" // Important for SEO and accessibility
                 width={40} // Specify the intrinsic width of the image (in pixels)
                 height={40} // Specify the intrinsic height of the image (in pixels)
@@ -37,9 +37,9 @@ export default function NavBar() {
             </div>
           </Link>
         </div>
-        <div className="flex items-center flex-row gap-4">
+        <div className="flex items-center flex-row gap-2 sm:gap-4">
           <nav>
-            <ul className="flex items-center gap-6">
+            <ul className="flex items-center gap-3 sm:gap-6">
               {navLinks.map((link) => {
                 return (
                   <li key={link.url}>
