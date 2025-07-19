@@ -20,13 +20,16 @@ export default function HomePage() {
         <h1 className="text-3xl font-bold sm:text-5xl text-center">
           Boris de Jong
         </h1>
-        <div className="text-center flex items-center gap-2"><span>Product Manager at </span><Image 
-                                                        src="/images/belsimpel.webp" 
-                                                        alt="Belsimpel logo"
-                                                        width={72}
-                                                        height={18}
-                                                        className="block w-18 h-[4.5] mt-1"
-                                                        /></div>
+        <div className="text-center flex items-center gap-2">
+          <span>Product Manager at </span>
+          <Image
+            src="/images/belsimpel.webp"
+            alt="Belsimpel logo"
+            width={72}
+            height={18}
+            className="block w-18 h-[4.5] mt-1"
+          />
+        </div>
       </div>
     </section>
   );
