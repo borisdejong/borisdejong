@@ -33,6 +33,7 @@ export default function NavBar() {
                 width={40} // Specify the intrinsic width of the image (in pixels)
                 height={40} // Specify the intrinsic height of the image (in pixels)
                 className="block h-10 w-10 rounded-full"
+                priority={true}
               />
             </div>
           </Link>
