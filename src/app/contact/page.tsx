@@ -11,7 +11,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <section className="justify-between items-center">
-      <Intro title={PAGE_TITLE} description="You can email me at: inbox[dot]borisdejong.dev" />
+      <Intro
+        title={PAGE_TITLE}
+        description="You can email me at: inbox[dot]borisdejong.dev"
+      />
     </section>
   );
 }

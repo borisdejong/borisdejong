@@ -23,7 +23,7 @@ export default function NavBar() {
       <div className="mx-auto flex max-w-5xl items-center justify-between border-b border-zinc-200 dark:border-gray-700 bg-white dark:bg-black p-4 py-2 text-sm backdrop-blur transition-colors duration-150 sm:rounded-lg sm:border lg:px-6">
         <div className="text-lg font-bold">
           <Link
-            className="group flex items-center justify-center rounded-full bg-white bg-gradient-to-r from-blue-500 via-green-500 to-purple-600 bg-[length:400%_400%] transition hover:scale-105 hover:animate-border focus:outline-none focus:ring-0 "
+            className="group flex items-center justify-center rounded-full bg-white bg-gradient-to-r from-blue-500 via-green-500 to-purple-600 bg-[length:400%_400%] transition hover:scale-105 hover:animate-border focus:outline-none focus:ring-0"
             href="/"
           >
             <div className="rounded-full p-[3px] transition-transform group-hover:scale-105">
